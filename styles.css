@@ -1,0 +1,246 @@
+/* عام */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    background-image: url('nn.jpg');
+    font-size: 1rem; 
+}
+
+.logo-container {
+    position: absolute; /* ثابتة في مكانها */
+    top: 10px;         /* المسافة من أعلى الصفحة */
+    left: 10px;        /* المسافة من اليسار (لتكون في الزاوية اليسرى العليا) */
+    z-index: 1000;     /* لتكون فوق جميع العناصر الأخرى */
+}
+
+.logo-container img {
+    width: 20vw;  /* العرض نسبة إلى عرض نافذة المتصفح */
+    height: auto;
+    border-radius: 50%; /* يجعل الشعار دائريًا */
+    border: 2px solid #ccc; /* حدود للشعار (اختياري) */
+    object-fit: cover; /* تناسب الصورة داخل الدائرة */
+}
+
+header {
+   
+    background-color: transparent; /* إزالة الخلفية */
+    color: white;
+    padding: 5vw 0; /* padding متغير حسب الحجم */
+
+
+}
+
+header nav a {
+    font-weight: bold; /* يجعل النص عريضًا */
+    color: black;
+    margin: 0 10px;
+    text-decoration: none;
+    text-align: center;
+}
+
+header nav a:hover {
+    text-decoration: underline;
+}
+
+main {
+    padding: 90px;
+}
+
+footer {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 5px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.product-list, .cart-items {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 80px;
+}
+
+.product-list div, .cart-items div {
+    border: 1px solid #ddd;
+    padding: 5vw; /* استخدام وحدات نسبية لل padding */
+    text-align: center;
+}
+
+.hero {
+    text-align: center;
+    background-color: transparent;
+    padding: 5vw; /* لجعل الحشو يتكيف مع حجم الشاشة */
+}
+
+.contact-info {
+    margin-top: 30px;
+}
+
+.contact-info form input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+.contact-info button {
+    background-color: #ffcccb;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+.contact-info button:hover {
+    background-color: #ff69b4;
+}
+
+.product-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.product-card {
+    border: 1px solid #ddd;
+    padding: 5vw; /* padding متغير */
+    text-align: center;
+}
+
+.product-card img {
+    max-width: 100%;
+    height: auto;
+}
+
+.product-category {
+    margin-bottom: 50px;
+    padding: 5vw;
+}
+
+.product-category h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+button:hover {
+    opacity: 0.8; /* تعديل الشفافية عند التمرير */
+}
+
+h1 {
+    background-color: transparent;
+    color: black;
+    padding: 10px;
+}
+
+.login-container {
+    width: 90%; /* استخدام نسبة عرض نافذة المتصفح */
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.login-container h2 {
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+button {
+    width: 100%;
+    background-color: #347235;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+button:hover {
+    background-color: #99C68E;
+}
+
+p {
+    text-align: center;
+}
+
+/* لأجهزة الجوال */
+@media (max-width: 600px) {
+    body {
+        font-size: 0.9rem; /* تقليل حجم الخط للأجهزة الصغيرة */
+    }
+
+    .logo-container {
+        top: 5px;
+        left: 5px;
+    }
+
+    header {
+        padding: 10px;
+    }
+
+    .product-list {
+        grid-template-columns: 1fr; /* عرض منتج واحد في كل صف */
+        gap: 10px;
+    }
+
+    .product-list div, .cart-items div {
+        padding: 4vw; /* تقليل الحشو */
+    }
+
+    .login-container {
+        width: 95%;
+    }
+}
+
+/* للأجهزة اللوحية */
+@media (max-width: 900px) {
+    .product-list {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* عرض أكثر من عمود */
+        gap: 20px;
+    }
+
+    .hero {
+        padding: 4vw;
+    }
+
+    .login-container {
+        width: 80%;
+    }
+}
+
+/* للأجهزة الأكبر */
+@media (min-width: 1200px) {
+    .product-list {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 30px;
+    }
+
+    .hero {
+        padding: 2vw;
+    }
+
+    .login-container {
+        width: 40%;
+    }
+}

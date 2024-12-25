@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GreenBloom</title>
+    <link rel="stylesheet" href="styles.css">
+ <
+
+</head>
+<body style="background-color: #E0FFE0;;">
+<div class="logo-container">
+    <img src="logo.JPG" alt="Site Logo">
+
+
+  </div>
+</body>
+</html>
+
+    <header>
+	 
+	<section class="hero">
+        <h1>Welcome to the GreenBloom </h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="products.html">Products</a>
+            <a href="cart.html">Cart</a>
+			<a href="Contact Us.html">Contact Us</a>
+			
+<a href="Login.html">Login</a>
+
+        </nav>
+		</section>
+    </header>
+    
+    <main>
+        <section class="hero">
+            <h2>Discover eco-friendly products made for a greener future!</h2>
+            <p>Eco-friendly products specially designed for mothers and babies</p>
+        </section>
+        <style>
+
+        <section class="featured-products">
+            <h3>Featured Products</h3>
+            <div id="featured-container" class="product-list">
+                <!-- منتج مميز 1 -->
+                <div class="product-card">
+                    <img src="images/featured1.jpg" alt="Featured Product 1">
+                    <h3>Luxury Watch</h3>
+                    <p>Price: $299.99</p>
+                    <button onclick="addToCart(7)">Add to Cart</button>
+                </div>
+                <!-- منتج مميز 2 -->
+                <div class="product-card">
+                    <img src="images/featured2.jpg" alt="Featured Product 2">
+                    <h3>Elegant Perfume</h3>
+                    <p>Price: $99.99</p>
+                    <button onclick="addToCart(8)">Add to Cart</button>
+                </div>
+                <!-- منتج مميز 3 -->
+                <div class="product-card">
+                    <img src="images/featured3.jpg" alt="Featured Product 3">
+                    <h3>Flower Bouquet</h3>
+                    <p>Price: $39.99</p>
+                    <button onclick="addToCart(9)">Add to Cart</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+               <p>&copy; 2024 GreenBloom. All rights reserved.</p>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
